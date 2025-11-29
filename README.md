@@ -72,7 +72,9 @@ The demo page is set up to automatically include your compiled plugin JS module,
 2. Run `pnpm dev` to start a local server. This will watches for any changes to the `src` directory and automatically recompile any changes to those files.
 3. Open http://localhost:8000 in your browser to view the demo page.
 
-You may also wish to use the `index.html` file as the entrypoint for a [Github Pages project site](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#types-of-github-pages-sites), in order to easily share a live demo of your plugin.
+You may also wish to use the `index.html` file as the entrypoint for a [Github Pages project site](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#types-of-github-pages-sites), in order to easily share a live demo of your plugin. To set up, simply go to your repo's "Settings > Pages" tab, select "Deploy from a branch" for the source, and "main" branch with "/ (root)" directory, then save. 
+
+You can view this template's live Github Pages demo here: https://regaez.github.io/datastar-plugin-starter/
 
 ## Using your finished plugin
 
