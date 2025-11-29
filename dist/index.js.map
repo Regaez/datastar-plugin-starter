@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/index.ts"],
+  "sourcesContent": ["import { action } from \"datastar\";\n\nimport type { ActionPlugin } from \"@types\";\n\n// Example action plugin configuration\nconst plugin: ActionPlugin<string | number> = {\n  name: \"fizzbuzz\",\n  apply(_ctx, value: number) {\n    let output = \"\";\n    if (value % 3 === 0) output += \"fizz\";\n    if (value % 5 === 0) output += \"buzz\";\n    return output || value;\n  },\n};\n\n// Register the plugin\naction(plugin);\n"],
+  "mappings": "AAAA,OAAS,UAAAA,MAAc,WAKvB,IAAMC,EAAwC,CAC5C,KAAM,WACN,MAAMC,EAAMC,EAAe,CACzB,IAAIC,EAAS,GACb,OAAID,EAAQ,IAAM,IAAGC,GAAU,QAC3BD,EAAQ,IAAM,IAAGC,GAAU,QACxBA,GAAUD,CACnB,CACF,EAGAH,EAAOC,CAAM",
+  "names": ["action", "plugin", "_ctx", "value", "output"]
+}

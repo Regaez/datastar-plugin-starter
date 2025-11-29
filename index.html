@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Datastar Plugin Starter</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"
+    />
+    <script type="importmap">
+      {
+        "imports": {
+          "datastar": "https://cdn.jsdelivr.net/gh/starfederation/datastar@1.0.0-RC.6/bundles/datastar.js"
+        }
+      }
+    </script>
+    <script type="module" src="./dist/index.js"></script>
+  </head>
+  <body>
+    <main>
+      <h1>Plugin Demo</h1>
+
+      <!-- add some HTML here to demo your plugin behaviour -->
+      <pre><code
+          data-signals:i="1"
+          data-on-interval__duration.1s="$i++"
+          data-text="@fizzbuzz($i)"
+      ></code></pre>
+    </main>
+  </body>
+</html>
