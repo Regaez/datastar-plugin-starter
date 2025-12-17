@@ -20,7 +20,7 @@
     "watch": "node esbuild.dev.mjs"
   },
   "devDependencies": {
-    "datastar": "github:starfederation/datastar#v1.0.0-RC.6",
+    "datastar": "github:starfederation/datastar#v1.0.0-RC.7",
     "esbuild": "0.27.0",
     "typescript": "5.9.3"
   },

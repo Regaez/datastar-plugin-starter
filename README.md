@@ -60,7 +60,7 @@ Since the `datastar` module is marked as an _external dependency_ when compiling
 
 ### Updating the Datastar version
 
-Rather than tracking the latest state of the Datastar repo (which may be unstable), it is advised to track specific releases. **The template currently tracks `v1.0.0-RC.6`** (the latest version at the time of writing).
+Rather than tracking the latest state of the Datastar repo (which may be unstable), it is advised to track specific releases. **The template currently tracks `v1.0.0-RC.7`** (the latest version at the time of writing).
 
 You can update the version by adjusting the `#` tag value for the `datastar` dependency in your `package.json` file and re-running the `pnpm i` command.
 
@@ -88,7 +88,7 @@ For example, the following should be included in the `<head>`:
 <script type="importmap">
   {
     "imports": {
-      "datastar": "https://cdn.jsdelivr.net/gh/starfederation/datastar@1.0.0-RC.6/bundles/datastar.js"
+      "datastar": "https://cdn.jsdelivr.net/gh/starfederation/datastar@1.0.0-RC.7/bundles/datastar.js"
     }
   }
 </script>
