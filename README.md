@@ -90,7 +90,7 @@ You may want to change your project to instead use [Datastar Pro](https://data-s
 }
 ```
 
-3. Finally, run `pnpm i` to update your local `node_modules` dependencies (**this requires read permission for the `datastar-pro` repository!**). You should now be able to import Datastar Pro features, such as `rocket`:
+3. Finally, run `pnpm i` to update your local `node_modules` dependencies (**this requires read permission for the `datastar-pro` repository!**). You should now be able to import Datastar Pro features, such as `rocket`, and benefit from Typescript LSP features:
 
 ```ts
 import { rocket } from "datastar";
