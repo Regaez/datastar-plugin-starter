@@ -31,6 +31,9 @@
       "@plugins/*": [
         "./node_modules/datastar/library/src/plugins/*"
       ],
+      "@pro/*": [
+        "./node_modules/datastar/library/src/pro/*"
+      ],
       "@types": [
         "./node_modules/datastar/library/src/engine/types.ts"
       ],

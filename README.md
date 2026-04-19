@@ -1,6 +1,6 @@
 # Datastar Plugin Starter
 
-This is a starter template to help you easily create new [Datastar](https://data-star.dev) plugins with [Typescript](https://www.typescriptlang.org/).
+This is a starter template to help you easily create new [Datastar](https://data-star.dev) plugins, or [Rocket components](https://data-star.dev/reference/rocket), with [Typescript](https://www.typescriptlang.org/).
 
 > In order to use this template, you should not fork this repo, but rather **utilise the [`Use this template`](https://github.com/regaez/datastar-plugin-starter/generate) feature** in Github.
 
@@ -37,6 +37,8 @@ Datastar supports 3 types of plugins: `action`, `attribute`, and `watcher`. Simp
 import { action, attribute, watcher } from "datastar";
 ```
 
+You may also want to create [Rocket components](https://data-star.dev/reference/rocket). If so, please refer to the [Using Datastar Pro](#using-datastar-pro) section below for additional setup requirements.
+
 ### Prefer to use Javascript?
 
 No problem, the builds scripts are configured to compile any `.js` files in the `src` directory, as well. You can simply rename the `src/index.ts` file extension, remove any Typescript-specific code, and proceed as you wish.
@@ -64,6 +66,36 @@ Rather than tracking the latest state of the Datastar repo (which may be unstabl
 
 You can update the version by adjusting the `#` tag value for the `datastar` dependency in your `package.json` file and re-running the `pnpm i` command.
 
+#### Using Datastar Pro
+
+You may want to change your project to instead use [Datastar Pro](https://data-star.dev/pro); for example, if you are creating [Rocket components](https://data-star.dev/reference/rocket). In order to do this, you will need to update both the `package.json` and `tsconfig.json` files, and **you must have access to the Datastar Pro Github repository** (which should be granted to you once you have purchased Datastar Pro).
+
+1. Change the `datastar` module within your `devDependencies` to reference the `starfederation/datastar-pro` repository:
+
+```diff
+"devDependencies": {
+- "datastar": "github:starfederation/datastar#v1.0.0",
++ "datastar": "github:starfederation/datastar-pro#v1.0.0",
+}
+```
+
+2. Adjust the `datastar` path in `tsconfig.json` to point to the `datastar-pro.ts` bundle, instead of `datastar.ts`.
+
+```diff
+"paths": {
+  "datastar": [
+-    "./node_modules/datastar/library/src/bundles/datastar.ts"
++    "./node_modules/datastar/library/src/bundles/datastar-pro.ts"
+  ],
+}
+```
+
+3. Finally, run `pnpm i` to update your local `node_modules` dependencies (**this requires read permission for the `datastar-pro` repository!**). You should now be able to import Datastar Pro features, such as `rocket`:
+
+```ts
+import { rocket } from "datastar";
+```
+
 ## Demo page
 
 The demo page is set up to automatically include your compiled plugin JS module, Datastar, and uses [PicoCSS (classless version)](https://picocss.com/docs/classless) to apply some basic styling.
@@ -81,6 +113,8 @@ You can view this template's live Github Pages demo here: https://regaez.github.
 Run `pnpm build` to compile your plugin's Typescript code into a minified Javascript bundle, output to the `dist` directory. It is recommended to commit these files to the repo, so that others may use a CDN, such as [JDDelivr](https://www.jsdelivr.com/), to easily try out/use the plugin.
 
 The plugin expects you to provide an [import map](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script/type/importmap) that specifies the location of the `datastar` module and a `<script type="module">` that references the plugin itself.
+
+> **NOTE**: if you are creating a [Rocket component](https://data-star.dev/reference/rocket), then you should ensure you are referencing a [Datastar Pro](https://data-star.dev/pro) bundle within your import map.
 
 For example, the following should be included in the `<head>`:
 
