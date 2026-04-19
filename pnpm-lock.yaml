@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       datastar:
-        specifier: github:starfederation/datastar#v1.0.0-RC.7
-        version: https://codeload.github.com/starfederation/datastar/tar.gz/bb49b257787310e396f511f5912fdc6180ab4a60
+        specifier: github:starfederation/datastar#v1.0.0
+        version: https://codeload.github.com/starfederation/datastar/tar.gz/3cab74bf158f3a599bb549beb994a118b63aa11f
       esbuild:
         specifier: 0.27.0
         version: 0.27.0
@@ -176,8 +176,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  datastar@https://codeload.github.com/starfederation/datastar/tar.gz/bb49b257787310e396f511f5912fdc6180ab4a60:
-    resolution: {tarball: https://codeload.github.com/starfederation/datastar/tar.gz/bb49b257787310e396f511f5912fdc6180ab4a60}
+  datastar@https://codeload.github.com/starfederation/datastar/tar.gz/3cab74bf158f3a599bb549beb994a118b63aa11f:
+    resolution: {tarball: https://codeload.github.com/starfederation/datastar/tar.gz/3cab74bf158f3a599bb549beb994a118b63aa11f}
     version: 0.0.0
 
   esbuild@0.27.0:
@@ -270,7 +270,7 @@ snapshots:
   '@esbuild/win32-x64@0.27.0':
     optional: true
 
-  datastar@https://codeload.github.com/starfederation/datastar/tar.gz/bb49b257787310e396f511f5912fdc6180ab4a60: {}
+  datastar@https://codeload.github.com/starfederation/datastar/tar.gz/3cab74bf158f3a599bb549beb994a118b63aa11f: {}
 
   esbuild@0.27.0:
     optionalDependencies:

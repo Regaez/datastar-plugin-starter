@@ -51,8 +51,8 @@ However, sometimes you may find yourself wanting to use some of Datastar's inter
 
 Since the `datastar` module is marked as an _external dependency_ when compiling your plugin, any code imported from that module **will not be included in your final plugin bundle**. Any code imported from the following import paths will be included in your final plugin bundle:
 
-- `@types`: useful to import common [Datastar type definitions](https://github.com/starfederation/datastar/blob/v1.0.0-RC.6/library/src/engine/types.ts)
-- `@utils/*`: useful to import [internal helper functions](https://github.com/starfederation/datastar/tree/v1.0.0-RC.6/library/src/utils) 
+- `@types`: useful to import common [Datastar type definitions](https://github.com/starfederation/datastar/blob/v1.0.0/library/src/engine/types.ts)
+- `@utils/*`: useful to import [internal helper functions](https://github.com/starfederation/datastar/tree/v1.0.0/library/src/utils) 
 - `@engine/*`
 - `@plugins/*`
 
@@ -60,7 +60,7 @@ Since the `datastar` module is marked as an _external dependency_ when compiling
 
 ### Updating the Datastar version
 
-Rather than tracking the latest state of the Datastar repo (which may be unstable), it is advised to track specific releases. **The template currently tracks `v1.0.0-RC.7`** (the latest version at the time of writing).
+Rather than tracking the latest state of the Datastar repo (which may be unstable), it is advised to track specific releases. **The template currently tracks `v1.0.0`** (the latest version at the time of writing).
 
 You can update the version by adjusting the `#` tag value for the `datastar` dependency in your `package.json` file and re-running the `pnpm i` command.
 
@@ -88,7 +88,7 @@ For example, the following should be included in the `<head>`:
 <script type="importmap">
   {
     "imports": {
-      "datastar": "https://cdn.jsdelivr.net/gh/starfederation/datastar@1.0.0-RC.7/bundles/datastar.js"
+      "datastar": "https://cdn.jsdelivr.net/gh/starfederation/datastar@v1.0.0/bundles/datastar.js"
     }
   }
 </script>
