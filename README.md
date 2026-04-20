@@ -101,7 +101,7 @@ import { rocket } from "datastar";
 The demo page is set up to automatically include your compiled plugin JS module, Datastar, and uses [PicoCSS (classless version)](https://picocss.com/docs/classless) to apply some basic styling.
 
 1. Edit the `index.html` file to add some HTML examples of your plugin in use.
-2. Run `pnpm dev` to start a local server. This will watches for any changes to the `src` directory and automatically recompile any changes to those files.
+2. Run `pnpm watch` to start a local server. This will watches for any changes to the `src` directory and automatically recompile any changes to those files.
 3. Open http://localhost:8000 in your browser to view the demo page.
 
 You may also wish to use the `index.html` file as the entrypoint for a [Github Pages project site](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#types-of-github-pages-sites), in order to easily share a live demo of your plugin. To set up, simply go to your repo's "Settings > Pages" tab, select "Deploy from a branch" for the source, and "main" branch with "/ (root)" directory, then save. 
