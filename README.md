@@ -2,6 +2,7 @@
 
 This is a starter template to help you easily create new [Datastar](https://data-star.dev) plugins, or [Rocket components](https://data-star.dev/reference/rocket), with [Typescript](https://www.typescriptlang.org/).
 
+> [!IMPORTANT]
 > In order to use this template, you should not fork this repo, but rather **utilise the [`Use this template`](https://github.com/regaez/datastar-plugin-starter/generate) feature** in Github.
 
 ## Getting started
@@ -9,6 +10,7 @@ This is a starter template to help you easily create new [Datastar](https://data
 - Install the latest version of [NodeJS](https://nodejs.org/) and [pnpm](https://pnpm.io/).
 - Run `pnpm i` to install dependencies.
 
+> [!TIP]
 > Since the [Datastar repo](https://github.com/starfederation/datastar) does not contain a `package.json` file, you will encounter issues installing its Github repo as a dependency via `npm`. Therefore it is advised to use `pnpm` instead.
 
 ### Scripts
@@ -49,7 +51,8 @@ Datastar has a Public API, available via import from the `datastar` module. It i
 
 However, sometimes you may find yourself wanting to use some of Datastar's internal utility functions, or its type definitions, in order for your plugin to behave in a consistent consistently with the core Datastar library.
 
-> **NOTE:** using any code that is **NOT part of the Public API** should be done with careful consideration, as it **is not officially supported** by Datastar and could result in breaking changes at any point.
+> [!WARNING]
+> Using any code that is **NOT part of the Public API** should be done with careful consideration, as it **is not officially supported** by Datastar and could result in breaking changes at any point.
 
 Since the `datastar` module is marked as an _external dependency_ when compiling your plugin, any code imported from that module **will not be included in your final plugin bundle**. Any code imported from the following import paths will be included in your final plugin bundle:
 
@@ -96,6 +99,9 @@ You may want to change your project to instead use [Datastar Pro](https://data-s
 import { rocket } from "datastar";
 ```
 
+> [!CAUTION]
+> Be careful not to breach the [Datastar Pro license terms](https://data-star.dev/pro#license): avoid importing any internal code from the Pro bundle into your plugin and do not redistribute the Pro bundle publicly in your plugin repo!
+
 ## Demo page
 
 The demo page is set up to automatically include your compiled plugin JS module, Datastar, and uses [PicoCSS (classless version)](https://picocss.com/docs/classless) to apply some basic styling.
@@ -114,7 +120,8 @@ Run `pnpm build` to compile your plugin's Typescript code into a minified Javasc
 
 The plugin expects you to provide an [import map](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script/type/importmap) that specifies the location of the `datastar` module and a `<script type="module">` that references the plugin itself.
 
-> **NOTE**: if you are creating a [Rocket component](https://data-star.dev/reference/rocket), then you should ensure you are referencing a [Datastar Pro](https://data-star.dev/pro) bundle within your import map.
+> [!IMPORTANT]
+> If you are creating a [Rocket component](https://data-star.dev/reference/rocket), then you should ensure you are referencing a [Datastar Pro](https://data-star.dev/pro) bundle within your import map.
 
 For example, the following should be included in the `<head>`:
 
@@ -128,4 +135,5 @@ For example, the following should be included in the `<head>`:
 </script>
 <script type="module" src="https://cdn.jsdelivr.net/gh/regaez/datastar-plugin-starter@1.0.0/dist/index.js"></script>
 ```
-> **NOTE:** adjust the `src` to match your plugin's repository.
+> [!NOTE]
+>  Adjust the `src` to match your plugin's repository.
